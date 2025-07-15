@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Task Management</h1>
+
+    <div id="auth">
+      <input type="text" id="username" placeholder="Enter username" />
+      <button id="loginBtn">Login</button>
+      <button id="logoutBtn" style="display:none;">Logout</button>
+    </div>
+
+    <div id="taskApp" style="display:none;">
+      <form id="taskForm">
+        <input type="text" id="title" placeholder="Task Title" required />
+        <input type="text" id="description" placeholder="Description" />
+        <select id="status">
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+        <button type="submit">Add Task</button>
+      </form>
+
+      <div>
+        <label>Filter:</label>
+        <select id="filterStatus">
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+        <label>Sort by:</label>
+        <select id="sortBy">
+          <option value="createdAt">Created At</option>
+          <option value="title">Title</option>
+        </select>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
